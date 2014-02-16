@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block head %}
+<script type="text/javascript" src="/static/js/popi.js"></script>
+{% endblock %}
+{% block content %}
+    <nav class="ink-navigation">
+       <ul class="menu vertical grey rounded shadowed ">
+          {%  for device in devicedb %}
+          <li class="bottom-space" id="{{ device.id }}" name="{{ device.id }}">
+            <a href="">
+                <button class="ink-button btn-remove red" id="{{ device.id }}" name="{{ device.name }}" ><i class="icon-remove-sign"></i></button>
+                {{ device.name }}
+                {{ device.home_code }}
+                {{ device.device_code }}
+                {{ device.id }}
+            </a>
+          </li>
+          {% endfor %}
+       </ul>
+    </nav>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block head %}
+
+{% endblock %}
+{% block content %}
+    <nav class="ink-navigation">
+       <ul class="menu vertical grey rounded shadowed ">
+          {%  for device in devicedb %}
+          <li>
+            <a href=""><i class="icon-minus space"></i>
+                {{ device.name }}
+                {{ device.home_code }}
+                {{ device.device_code }}
+                {{ device.device_status }}
+            </a>
+          </li>
+          {% endfor %}
+       </ul>
+    </nav>
+
+{% endblock %}

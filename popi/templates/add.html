@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block head %}
+
+{% endblock %}
+{% block content %}
+    <form id="add" class="ink-form" method="post" action="#" onsubmit="return Ink.UI.FormValidator_1.validate(this);">
+        <fieldset class="column-group quarter-gutters">
+            <div class="control-group large-100 medium-100 small-100">
+                <div class="control">
+                    <input type="text" name="name" id="name" placeholder="Name" class="ink-fv-required" />
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="column-group quarter-gutters">
+            <div class="control-group medium-100 small-100">
+                <ul class="control unstyled inline">
+                    <li>
+                        <input type="radio" class="horizontal-space" id="hc11" name="hc1" value="1">
+                    </li>
+                    <li>
+                        <input type="radio" class="horizontal-space" id="hc21" name="hc2" value="1">
+                    </li>
+                    <li>
+                        <input type="radio" class="horizontal-space" id="hc31" name="hc3" value="1">
+                    </li>
+                    <li>
+                        <input type="radio" class="horizontal-space" id="hc41" name="hc4" value="1">
+                    </li>
+                    <li>
+                        <input type="radio" class="horizontal-space" id="hc51" name="hc5" value="1">
+                        <label for="hc51">1</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="control-group medium-100 small-100">
+                <ul class="control unstyled inline">
+                    <li>
+                        <input type="radio" class="horizontal-space" id="hc10" name="hc1" value="0" checked="">
+                    </li>
+                    <li>
+                        <input type="radio" class="horizontal-space" id="hc20" name="hc2" value="0" checked="">
+                    </li>
+                    <li>
+                        <input type="radio" class="horizontal-space" id="hc30" name="hc3" value="0" checked="">
+                    </li>
+                    <li>
+                        <input type="radio" class="horizontal-space" id="hc40" name="hc4" value="0" checked="">
+                    </li>
+                    <li>
+                        <input type="radio" class="horizontal-space" id="hc50" name="hc5" value="0" checked="">
+                        <label for="hc51">0</label>
+                    </li>
+                </ul>
+            </div>
+        </fieldset>
+        <fieldset class="column-group quarter-gutters">
+            <div class="control-group medium-100 small-100">
+                <ul class="control unstyled inline">
+                    <li>
+                        <input type="radio" class="horizontal-space" id="dc11" name="dc1" value="1">
+                    </li>
+                    <li>
+                        <input type="radio" class="horizontal-space" id="dc21" name="dc2" value="1">
+                    </li>
+                    <li>
+                        <input type="radio" class="horizontal-space" id="dc31" name="dc3" value="1">
+                    </li>
+                    <li>
+                        <input type="radio" class="horizontal-space" id="dc41" name="dc4" value="1">
+                    </li>
+                    <li>
+                        <input type="radio" class="horizontal-space" id="dc51" name="dc5" value="1">
+                        <label for="dc51">1</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="control-group medium-100 small-100">
+                <ul class="control unstyled inline">
+                    <li>
+                        <input type="radio" class="horizontal-space" id="dc10" name="dc1" value="0" checked="">
+                    </li>
+                    <li>
+                        <input type="radio" class="horizontal-space" id="dc20" name="dc2" value="0" checked="">
+                    </li>
+                    <li>
+                        <input type="radio" class="horizontal-space" id="dc30" name="dc3" value="0" checked="">
+                    </li>
+                    <li>
+                        <input type="radio" class="horizontal-space" id="dc40" name="dc4" value="0" checked="">
+                    </li>
+                    <li>
+                        <input type="radio" class="horizontal-space" id="dc50" name="dc5" value="0" checked="">
+                        <label for="dc51">0</label>
+                    </li>
+                </ul>
+            </div>
+        </fieldset>
+        <div>
+            <input type="submit" name="sub" value="Submit" class="ink-button success" />
+        </div>
+    </form>
+{% endblock %}
