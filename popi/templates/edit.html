@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% block head %}
+<script type="text/javascript" src="/static/js/popi.js"></script>
+{% endblock %}
+{% block content %}
+    <nav class="ink-navigation">
+       <ul class="menu vertical grey rounded shadowed ">
+          {%  for device in devicedb %}
+          <li class="bottom-space" id="{{ device.id }}" name="{{ device.id }}">
+            <a href="">
+                <button class="ink-button green"  id="edit{{ device.id }}"><i class="icon-edit-sign"></i></button>
+                {{ device.name }}
+                HC {{ device.home_code }}
+                DV {{ device.device_code }}
+                {{ device.id }}
+            </a>
+          </li>
+            <div class="ink-shade fade">
+                <div class="ink-modal" data-trigger="#edit{{ device.id }}">
+                    <div class="modal-header">Edit: <b>{{ device.name }}</b></div>
+                    <div class="modal-body">
+                        <form id="edit{{ device.id }}" class="ink-form" method="post" action="#" onsubmit="return Ink.UI.FormValidator_1.validate(this);">
+                            <fieldset class="column-group quarter-gutters">
+                                <div class="control-group large-100 medium-100 small-100">
+                                    <div class="control">
+                                        <input type="text" name="name" id="name{{ device.id }}" value="{{ device.name }}" class="ink-fv-required" />
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="column-group quarter-gutters">
+                                <div class="control-group medium-100 small-100">
+                                    <ul class="control unstyled inline">
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="hc11{{ device.id }}" name="hc1" value="1">
+                                        </li>
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="hc21{{ device.id }}" name="hc2" value="1">
+                                        </li>
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="hc31{{ device.id }}" name="hc3" value="1">
+                                        </li>
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="hc41{{ device.id }}" name="hc4" value="1">
+                                        </li>
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="hc51{{ device.id }}" name="hc5" value="1">
+                                            <label for="hc51">1</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="control-group medium-100 small-100">
+                                    <ul class="control unstyled inline">
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="hc10{{ device.id }}" name="hc1" value="0" checked="">
+                                        </li>
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="hc20{{ device.id }}" name="hc2" value="0" checked="">
+                                        </li>
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="hc30{{ device.id }}" name="hc3" value="0" checked="">
+                                        </li>
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="hc40{{ device.id }}" name="hc4" value="0" checked="">
+                                        </li>
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="hc50{{ device.id }}" name="hc5" value="0" checked="">
+                                            <label for="hc51">0</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </fieldset>
+                            <fieldset class="column-group quarter-gutters">
+                                <div class="control-group medium-100 small-100">
+                                    <ul class="control unstyled inline">
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="dc11{{ device.id }}" name="dc1" value="1">
+                                        </li>
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="dc21{{ device.id }}" name="dc2" value="1">
+                                        </li>
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="dc31{{ device.id }}" name="dc3" value="1">
+                                        </li>
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="dc41{{ device.id }}" name="dc4" value="1">
+                                        </li>
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="dc51{{ device.id }}" name="dc5" value="1">
+                                            <label for="dc51">1</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="control-group medium-100 small-100">
+                                    <ul class="control unstyled inline">
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="dc10{{ device.id }}" name="dc1" value="0" checked="">
+                                        </li>
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="dc20{{ device.id }}" name="dc2" value="0" checked="">
+                                        </li>
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="dc30{{ device.id }}" name="dc3" value="0" checked="">
+                                        </li>
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="dc40{{ device.id }}" name="dc4" value="0" checked="">
+                                        </li>
+                                        <li>
+                                            <input type="radio" class="horizontal-space" id="dc50{{ device.id }}" name="dc5" value="0" checked="">
+                                            <label for="dc51">0</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="push-right">
+                            <button type="submit" class="ink-button btn-edit red" id="{{ device.id }}" name="{{ device.name }}" ><i class="icon-edit-sign"></i> edit</button>
+                            <button class="ink-button green ink-dismiss"><i class="icon-remove"></i> cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          {% endfor %}
+       </ul>
+    </nav>
+
+{% endblock %}

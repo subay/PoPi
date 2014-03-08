@@ -50,10 +50,7 @@ def add():
 def remove():
     template = template_env.get_template('remove.html')
     if request.method == "GET":
-        #model.db_session.delet(model.Device('wwww', '10000', '00000', 0))
-        #model.db_session.commit()
         devicedb = model.db_session.query(model.Device).all()
-        #devicedb = model.Device.query.filter_by(name='Adrian Wolf').first()
         return template.render(devicedb=devicedb)
     if request.method == "POST":
         device_id = request.form['id']
@@ -62,4 +59,17 @@ def remove():
         model.db_session.commit()
         return template.render()
 
-
+@app.route('/edit', methods=['POST', 'GET'])
+def edit():
+    template = template_env.get_template('edit.html')
+    if request.method == "GET":
+        devicedb = model.db_session.query(model.Device).all()
+        return template.render(devicedb=devicedb)
+    if request.method == "POST":
+        device_id = request.form['id']
+        #return device_id
+        device_object = model.Device.query.filter_by(id=device_id).first()
+        return device_object
+        model.db_session.delete(device_object)
+        model.db_session.commit()
+        return template.render()

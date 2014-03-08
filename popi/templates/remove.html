@@ -8,14 +8,27 @@
           {%  for device in devicedb %}
           <li class="bottom-space" id="{{ device.id }}" name="{{ device.id }}">
             <a href="">
-                <button class="ink-button btn-remove red" id="{{ device.id }}" name="{{ device.name }}" ><i class="icon-remove-sign"></i></button>
+                <button class="ink-button red"  id="remove{{ device.id }}"><i class="icon-remove-sign"></i></button>
                 {{ device.name }}
-                {{ device.home_code }}
-                {{ device.device_code }}
+                HC {{ device.home_code }}
+                DV {{ device.device_code }}
                 {{ device.id }}
             </a>
           </li>
+            <div class="ink-shade fade">
+                <div class="ink-modal" data-trigger="#remove{{ device.id }}">
+                    <div class="modal-header">Delete: <b>{{ device.name }}</b></div>
+                    <div class="modal-body">Are you sure to delete this device?</div>
+                    <div class="modal-footer">
+                        <div class="push-right">
+                            <button class="ink-button btn-remove red" id="{{ device.id }}" name="{{ device.name }}" ><i class="icon-remove-sign"></i> delete</button>
+                            <button class="ink-button green ink-dismiss"><i class="icon-remove"></i> cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
           {% endfor %}
        </ul>
     </nav>
+
 {% endblock %}
