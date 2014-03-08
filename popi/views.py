@@ -67,9 +67,12 @@ def edit():
         return template.render(devicedb=devicedb)
     if request.method == "POST":
         device_id = request.form['id']
-        #return device_id
+        name = request.form['name']
+        home_code = request.form['hc']
+        device_code = request.form['dc']
         device_object = model.Device.query.filter_by(id=device_id).first()
-        return device_object
-        model.db_session.delete(device_object)
+        device_object.name = name
+        device_object.home_code = home_code
+        device_object.device_code = device_code
         model.db_session.commit()
         return template.render()
