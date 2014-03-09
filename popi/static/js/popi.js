@@ -1,5 +1,27 @@
 $( document ).ready(function() {
     $(function() {
+        $(".btn-on").click( function(e)
+            {
+                e.preventDefault();
+                var id = $(this).attr('id');
+                console.log('on '+id);
+                data = {'id':id,'status':'1'};
+                $.post( "/", data, function( d ) {
+                    location.reload();
+                });
+            }
+        );
+        $(".btn-off").click( function(e)
+            {
+                e.preventDefault();
+                var id = $(this).attr('id');
+                console.log('on '+id);
+                data = {'id':id,'status':'0'};
+                $.post( "/", data, function( d ) {
+                    location.reload();
+                });
+            }
+        );
         $(".btn-remove").click( function(e)
             {
                 e.preventDefault();
@@ -33,7 +55,7 @@ $( document ).ready(function() {
             var name = ($(updateObject).get(1));
             var hc = ($(updateObject).get(2))+($(updateObject).get(3)+($(updateObject).get(4))+($(updateObject).get(5))+($(updateObject).get(6)));
             var dc = ($(updateObject).get(7))+($(updateObject).get(8)+($(updateObject).get(9))+($(updateObject).get(10))+($(updateObject).get(11)));
-            var data =  {'id':id,'name':name, 'hc':hc,'dc':dc};
+            var data =  {'id':id,'name':name,'hc':hc,'dc':dc};
             //console.log(data);
             $.post( "edit", data, function( d ) {
                 location.reload();

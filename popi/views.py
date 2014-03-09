@@ -22,12 +22,18 @@ def favicon():
 @app.route('/', methods=['POST', 'GET'])
 def root_page():
     model.init_db_if_needed()
-    #model.db_session.add(Device('name', '111111', '112221', 'off'))
-    #model.db_session.commit()
     template = template_env.get_template('index.html')
-    if request.method == "GET":
+    if request.method == 'GET':
         devicedb = model.db_session.query(model.Device).all()
-    return template.render(devicedb=devicedb)
+        return template.render(devicedb=devicedb)
+    if request.method == 'POST':
+        device_id = request.form['id']
+        device_status = request.form['status']
+        device_object = model.Device.query.filter_by(id=device_id).first()
+        device_object.device_status = device_status
+        model.db_session.commit()
+        # do power switch magic
+        return template.render()
 
 @app.route('/settings', methods=['POST', 'GET'])
 def settings():

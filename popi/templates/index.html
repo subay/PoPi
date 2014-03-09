@@ -1,14 +1,17 @@
 {% extends "base.html" %}
 {% block head %}
-
+<script type="text/javascript" src="/static/js/popi.js"></script>
 {% endblock %}
 {% block content %}
     <nav class="ink-navigation">
-       <ul class="menu vertical grey rounded shadowed ">
+       <ul class="menu vertical grey rounded shadowed">
           {%  for device in devicedb %}
           <li>
-            <a href=""><i class="icon-minus space"></i>
-                {{ device.name }}
+            <a href="">
+                <button class="ink-button orange btn-on"  id="{{ device.id }}"><i class="icon-lightbulb"></i></button>
+                <button class="ink-button red btn-off"  id="{{ device.id }}"><i class="icon-off"></i></button>
+                <button class="ink-button blue"  id="{{ device.id }}"><i class="icon-time"></i></button>
+                <strong>{{ device.name }}</strong>
                 {{ device.home_code }}
                 {{ device.device_code }}
                 {{ device.device_status }}
