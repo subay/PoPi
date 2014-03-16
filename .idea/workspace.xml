@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06c437d0-bc67-46ab-8660-f46e09432e3e" name="Default" comment="now you can switch on and off in database">
+    <list default="true" id="06c437d0-bc67-46ab-8660-f46e09432e3e" name="Default" comment="now with gunicorn an nginx">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/popi/__init__.py" afterPath="$PROJECT_DIR$/popi/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/popi.iml" afterPath="$PROJECT_DIR$/.idea/popi.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/popi_server.py" afterPath="$PROJECT_DIR$/popi_server.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="popi.iws" />
@@ -14,7 +19,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/popi$popi.coverage" NAME="popi Coverage Results" MODIFIED="1394384468412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/popi$popi.coverage" NAME="popi Coverage Results" MODIFIED="1394974128115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/popi$model.coverage" NAME="model Coverage Results" MODIFIED="1392572051765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/popi" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -32,32 +37,34 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/popi/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="31" selection-start="1138" selection-end="1138" vertical-scroll-proportion="-8.518518" vertical-offset="292" max-vertical-offset="1152">
-              <folding>
-                <element signature="e#1242#1324#0" expanded="false" />
-                <element signature="e#1385#1963#0" expanded="false" />
-                <element signature="e#2030#2486#0" expanded="false" />
-                <marker date="1394384468406" expanded="true" signature="597:1171" placeholder="..." />
-              </folding>
+            <state line="34" column="31" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1530">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="popi.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/popi/static/js/popi.js">
+      <file leaf-file-name="popi_server.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/popi_server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="43" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="1314">
-              <folding>
-                <marker date="1394384512035" expanded="true" signature="31:2571" placeholder="{...}" />
-              </folding>
+            <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1056">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/popi/templates/index.html">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="53" selection-start="484" selection-end="484" vertical-scroll-proportion="0.5625" vertical-offset="0" max-vertical-offset="522">
+            <state line="31" column="29" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="276" max-vertical-offset="1440">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/popi/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="22" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="306">
               <folding />
             </state>
           </provider>
@@ -85,9 +92,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/popi/templates/ase.html" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/popi_server.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/popi/database.py" />
         <option value="$PROJECT_DIR$/popi/templates/delete.html" />
         <option value="$PROJECT_DIR$/popi/static/css/popi.css" />
@@ -100,13 +104,37 @@
         <option value="$PROJECT_DIR$/popi/views.py" />
         <option value="$PROJECT_DIR$/popi/static/js/popi.js" />
         <option value="$PROJECT_DIR$/popi/templates/index.html" />
+        <option value="$PROJECT_DIR$/popi/__init__.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/popi_server.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="25" />
-    <option name="width" value="1280" />
-    <option name="height" value="775" />
+    <option name="x" value="-2" />
+    <option name="y" value="26" />
+    <option name="width" value="1924" />
+    <option name="height" value="1176" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyInterpreterInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -119,7 +147,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="1" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -134,7 +162,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -149,6 +176,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="PoPi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="popi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PoPi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="popi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -159,39 +200,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="popi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="popi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="popi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="popi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="popi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="popi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="popi" />
+              <option name="myItemId" value="PoPi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -205,13 +214,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/popi_server.py" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
@@ -471,28 +481,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1280" height="775" extended-state="0" />
-    <editor active="false" />
+    <frame x="-2" y="26" width="1924" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871652" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25892857" sideWeight="0.7133758" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1875" sideWeight="0.67038214" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18717414" sideWeight="0.67038214" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34076434" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28716528" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -515,6 +525,11 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14968152" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -525,37 +540,65 @@
     <MESSAGE value="working on edit" />
     <MESSAGE value="now you can edit devices" />
     <MESSAGE value="now you can switch on and off in database" />
-    <option name="LAST_COMMIT_MESSAGE" value="now you can switch on and off in database" />
+    <MESSAGE value="now with gunicorn an nginx" />
+    <option name="LAST_COMMIT_MESSAGE" value="now with gunicorn an nginx" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/popi/model.py">
+    <entry file="file://$PROJECT_DIR$/popi/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="61" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="774">
+        <state line="34" column="31" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/popi/static/cookbook/regular-grid.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.630435" vertical-offset="2440" max-vertical-offset="2970" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/popi/static/cookbook/my-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="11433" vertical-scroll-proportion="30.0" vertical-offset="810" max-vertical-offset="2862" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/popi_server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="11" selection-end="11" vertical-scroll-proportion="0.04639175" vertical-offset="0" max-vertical-offset="388" />
+        <state line="16" column="13" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="396">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="576">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/popi/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="22" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270" />
+        <state line="11" column="22" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="306">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/popi/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="31" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/popi/static/js/popi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="43" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="1314" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/popi/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="53" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="522" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/popi/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="61" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="774">
+          <folding>
+            <element signature="e#0#20#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/popi/static/css/popi.css">
@@ -563,81 +606,81 @@
         <state line="4" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.16783217" vertical-offset="0" max-vertical-offset="429" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="2" selection-start="26" selection-end="26" vertical-scroll-proportion="0.15254237" vertical-offset="0" max-vertical-offset="354">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/popi/templates/remove.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="94" selection-start="1320" selection-end="1326" vertical-scroll-proportion="1.2463768" vertical-offset="2" max-vertical-offset="702">
-          <folding />
-        </state>
+        <state line="24" column="94" selection-start="1320" selection-end="1326" vertical-scroll-proportion="1.2463768" vertical-offset="2" max-vertical-offset="702" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/popi/templates/settings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="59" selection-start="465" selection-end="465" vertical-scroll-proportion="0.4695652" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
+        <state line="9" column="59" selection-start="465" selection-end="465" vertical-scroll-proportion="0.4695652" vertical-offset="0" max-vertical-offset="345" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/popi/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="4" selection-start="224" selection-end="224" vertical-scroll-proportion="-1.0930233" vertical-offset="755" max-vertical-offset="1314">
-          <folding />
-        </state>
+        <state line="8" column="4" selection-start="224" selection-end="224" vertical-scroll-proportion="-1.0930233" vertical-offset="755" max-vertical-offset="1314" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/popi/templates/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="42" selection-start="43" selection-end="109" vertical-scroll-proportion="0.06440072" vertical-offset="0" max-vertical-offset="2394">
-          <folding />
-        </state>
+        <state line="2" column="42" selection-start="43" selection-end="109" vertical-scroll-proportion="0.06440072" vertical-offset="0" max-vertical-offset="2394" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/popi/templates/add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="43" selection-start="684" selection-end="692" vertical-scroll-proportion="0.3864043" vertical-offset="54" max-vertical-offset="1926">
-          <folding />
-        </state>
+        <state line="15" column="43" selection-start="684" selection-end="692" vertical-scroll-proportion="0.3864043" vertical-offset="54" max-vertical-offset="1926" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/popi/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="55" selection-start="232" selection-end="232" vertical-scroll-proportion="0.15041783" vertical-offset="0" max-vertical-offset="718" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/popi/static/js/popi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="43" selection-start="626" selection-end="626" vertical-scroll-proportion="0.33020133" vertical-offset="78" max-vertical-offset="1314" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/popi/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="34" selection-start="629" selection-end="629" vertical-scroll-proportion="0.21035059" vertical-offset="216" max-vertical-offset="918">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
           <folding>
             <element signature="e#0#20#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/popi/static/js/popi.js">
+    <entry file="file://$PROJECT_DIR$/popi/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="43" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="1314">
-          <folding>
-            <marker date="1394384512035" expanded="true" signature="31:2571" placeholder="{...}" />
-          </folding>
+        <state line="11" column="22" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="8" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0966443" vertical-offset="0" max-vertical-offset="745">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="29" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="276" max-vertical-offset="1440">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/popi/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="31" selection-start="1138" selection-end="1138" vertical-scroll-proportion="-8.518518" vertical-offset="292" max-vertical-offset="1152">
-          <folding>
-            <element signature="e#1242#1324#0" expanded="false" />
-            <element signature="e#1385#1963#0" expanded="false" />
-            <element signature="e#2030#2486#0" expanded="false" />
-            <marker date="1394384468406" expanded="true" signature="597:1171" placeholder="..." />
-          </folding>
+        <state line="34" column="31" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="1620">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/popi/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/popi_server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="53" selection-start="484" selection-end="484" vertical-scroll-proportion="0.5625" vertical-offset="0" max-vertical-offset="522">
+        <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1056">
           <folding />
         </state>
       </provider>
