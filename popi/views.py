@@ -1,5 +1,5 @@
 import os
-
+import switch
 from flask import redirect, send_from_directory, request, session, g, flash, url_for, abort, render_template
 from jinja2 import Environment, FileSystemLoader
 
@@ -33,6 +33,8 @@ def root_page():
         device_object.device_status = device_status
         model.db_session.commit()
         # do power switch magic
+        switch.device = switch.RemoteSwitch(switch.unit_code=2, switch.system_code=[1,0,1,1,0], switch.pin=17)
+        switch.device.switchOn()
         return template.render()
 
 @app.route('/settings', methods=['POST', 'GET'])

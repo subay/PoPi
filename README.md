@@ -1,12 +1,17 @@
 # PoPi
-433mhz Raspberry Pi Python Light Webinterface
+433mhz Raspberry Pi Python Light Webinterface.
 Needs linux. Development under Linux Mint Debian Edition.
 
 ## Installation
 
-Install python-dev:
+Install WiringPi:
 ```
-sudo apt-get install python-dev
+https://projects.drogon.net/raspberry-pi/wiringpi/download-and-install/
+```
+
+Install python-dev and python-setuptools:
+```
+sudo apt-get install python-dev python-setuptools
 ```
 
 Install libev-dev:
@@ -19,9 +24,23 @@ Install python requirements:
 sudo pip install -r requirements.txt
 ```
 
-Serve with gunicorn:
+Install WiringPi-Python
 ```
-gunicorn popi:app
+sudo git clone https://github.com/WiringPi/WiringPi-Python.git
+cd WiringPi-Python
+sudo python setup.py install
+```
+
+Export Pin 17 for non root usage on boot:
+```
+sudo nano /etc/rc.local
+Before line "exit 0". Replace "user" with your user. In my case "pi"
+sudo -u user /usr/local/bin/gpio export 17 out
+```
+
+Restart your Pi:
+```
+sudo reboot
 ```
 
 Nginx as proxy between external and the web server. It also servers the static file:
@@ -66,7 +85,12 @@ Reload nginx:
 sudo service nginx reload
 ```
 
-Reload nginx:
+Serve with gunicorn:
+```
+gunicorn popi:app
+```
+
+Check out:
 
 ```
 http://yourip
