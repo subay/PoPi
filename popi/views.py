@@ -1,5 +1,5 @@
 import os
-import switch
+#import switch
 from flask import redirect, send_from_directory, request, session, g, flash, url_for, abort, render_template
 from jinja2 import Environment, FileSystemLoader
 
@@ -32,9 +32,16 @@ def root_page():
         device_object = model.Device.query.filter_by(id=device_id).first()
         device_object.device_status = device_status
         model.db_session.commit()
-        # do power switch magic
-        switch.device = switch.RemoteSwitch(switch.unit_code=2, switch.system_code=[1,0,1,1,0], switch.pin=17)
-        switch.device.switchOn()
+        #device = switch.RemoteSwitch(unit_code=device_object.device_code, system_code=device_object.home_code, pin=17)
+        if device_object.device_status == 1:
+            #device.switchOff()
+            print "device.switchOff()"
+        if device_object.device_status == 0:
+            #device.switchOn()
+            print "#device.switchOn()"
+        #print device_object.device_status
+        #print device_object.home_code
+        #print device_object.device_code
         return template.render()
 
 @app.route('/settings', methods=['POST', 'GET'])
@@ -47,7 +54,7 @@ def add():
     if request.method == 'POST':
         name = request.form['name']
         hc = str(request.form['hc1']) + str(request.form['hc2']) + str(request.form['hc3']) + str(request.form['hc4']) + str(request.form['hc5'])
-        dc = str(request.form['dc1']) + str(request.form['dc2']) + str(request.form['dc3']) + str(request.form['dc4']) + str(request.form['dc5'])
+        dc = str(request.form['dc'])
         model.db_session.add(model.Device(name, hc, dc, 0))
         model.db_session.commit()
         return redirect(url_for('root_page'))
