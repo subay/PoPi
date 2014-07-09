@@ -48,9 +48,10 @@ def settings():
 def add():
     if request.method == 'POST':
         name = request.form['name']
+        dt = request.form['type']
         hc = str(request.form['hc1']) + str(request.form['hc2']) + str(request.form['hc3']) + str(request.form['hc4']) + str(request.form['hc5'])
         dc = str(request.form['dc'])
-        model.db_session.add(model.Device(name, hc, dc, 0))
+        model.db_session.add(model.Device(name, hc, dc, 0, dt))
         model.db_session.commit()
         return redirect(url_for('root_page'))
     template = template_env.get_template('add.html')
@@ -80,9 +81,11 @@ def edit():
         name = request.form['name']
         home_code = request.form['hc']
         device_code = request.form['dc']
+        device_type = request.form['dt']
         device_object = model.Device.query.filter_by(id=device_id).first()
         device_object.name = name
         device_object.home_code = home_code
         device_object.device_code = device_code
+        device_object.device_type = device_type
         model.db_session.commit()
         return template.render()

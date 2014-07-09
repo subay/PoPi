@@ -3,12 +3,34 @@
 
 {% endblock %}
 {% block content %}
-    <form id="add" class="ink-form" method="post" action="#" onsubmit="return Ink.UI.FormValidator_1.validate(this);">
+    <form id="add" class="ink-form" method="post" action="#" onsubmit="return Ink.UI.FormValidator_1.validate(this);"headingheading>
         <fieldset class="column-group quarter-gutters">
             <div class="control-group large-100 medium-100 small-100">
                 <div class="control">
                     <input type="text" name="name" id="name" placeholder="Name" class="ink-fv-required" />
                 </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="control-group">
+                <ul class="control unstyled inline ink-fv-required">
+                <li>
+                  <input type="radio" name="type" value="lightbulb" id="dt1" checked="">
+                  <label for="dt1">Light</label>
+                </li>
+                <li>
+                  <input type="radio" name="type" value="refresh" id="dt2">
+                  <label for="dt2">Dimmer</label>
+                </li>
+                <li>
+                  <input type="radio" name="type" value="asterisk" id="dt3">
+                  <label for="dt3">Fan</label>
+                </li>
+                <li>
+                  <input type="radio" name="type" value="picture" id="dt4">
+                  <label for="dt4">Media</label>
+                </li>
+                </ul>
             </div>
         </fieldset>
         <fieldset class="column-group quarter-gutters">
@@ -57,7 +79,7 @@
             <div class="control-group medium-100 small-100">
                 <ul class="control unstyled inline">
                     <li>
-                        <input type="radio" class="horizontal-space" id="dcA" name="dc" value="1">
+                        <input type="radio" class="horizontal-space" id="dcA" name="dc" value="1" checked="">
                         <label for="">A</label>
                         <input type="radio" class="horizontal-space" id="dcB" name="dc" value="2">
                         <label for="">B</label>

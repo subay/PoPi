@@ -7,7 +7,7 @@
        <ul class="menu vertical grey rounded shadowed ">
           {%  for device in devicedb %}
           <li class="bottom-space" id="{{ device.id }}" name="{{ device.id }}">
-            <a href="">
+            <a>
                 <button class="ink-button green"  id="edit{{ device.id }}"><i class="icon-edit-sign"></i></button>
                 {{ device.name }}
                 HC {{ device.home_code }}
@@ -25,6 +25,28 @@
                                     <div class="control">
                                         <input type="text" name="name" id="name{{ device.id }}" value="{{ device.name }}" class="ink-fv-required" />
                                     </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="control-group">
+                                    <ul class="control unstyled inline ink-fv-required">
+                                    <li>
+                                      <input type="radio" name="type" value="lightbulb" id="dt1{{ device.id }}">
+                                      <label for="dt1">Light</label>
+                                    </li>
+                                    <li>
+                                      <input type="radio" name="type" value="refresh" id="dt2{{ device.id }}">
+                                      <label for="dt2">Dimmer</label>
+                                    </li>
+                                    <li>
+                                      <input type="radio" name="type" value="asterisk" id="dt3{{ device.id }}">
+                                      <label for="dt3">Fan</label>
+                                    </li>
+                                    <li>
+                                      <input type="radio" name="type" value="media" id="dt4{{ device.id }}">
+                                      <label for="dt4">Media</label>
+                                    </li>
+                                    </ul>
                                 </div>
                             </fieldset>
                             <fieldset class="column-group quarter-gutters">

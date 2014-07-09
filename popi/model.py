@@ -23,12 +23,14 @@ class Device(Base):
     home_code = Column(String(5), default=None)
     device_code = Column(String(5), default=None)
     device_status = Column(Integer, default=None)
+    device_type = Column(String(20), default=None)
 
-    def __init__(self, name, home_code, device_code, device_status):
+    def __init__(self, name, home_code, device_code, device_status, device_type):
         self.name = name
         self.home_code = home_code
         self.device_code = device_code
         self.device_status = device_status
+        self.device_type = device_type
 
 
 if __name__ == '__main__':

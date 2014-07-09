@@ -10,10 +10,10 @@
             <a>
 
                 {% if device.device_status == 0 %}
-                    <button class="ink-button grey btn-on"  id="{{ device.id }}"><i class="icon-lightbulb"></i></button>
+                    <button class="ink-button grey btn-on"  id="{{ device.id }}"><i class="icon-{{ device.device_type }}"></i></button>
                     <button class="ink-button red btn-off"  id="{{ device.id }}"><i class="icon-off"></i></button>
                 {% elif device.device_status == 1 %}
-                    <button class="ink-button orange btn-on"  id="{{ device.id }}"><i class="icon-lightbulb"></i></button>
+                    <button class="ink-button orange btn-on"  id="{{ device.id }}"><i class="icon-{{ device.device_type }}"></i></button>
                     <button class="ink-button grey btn-off"  id="{{ device.id }}"><i class="icon-off"></i></button>
                     <button class="ink-button grey btn-timer"  id="{{ device.id }}"><i class="icon-time"></i></button>
                 {% endif %}

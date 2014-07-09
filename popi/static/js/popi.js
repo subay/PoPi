@@ -65,7 +65,8 @@ $( document ).ready(function() {
             var name = ($(updateObject).get(1));
             var hc = ($(updateObject).get(2))+($(updateObject).get(3)+($(updateObject).get(4))+($(updateObject).get(5))+($(updateObject).get(6)));
             var dc = $('input[name="dc"]:checked').val();
-            var data =  {'id':id,'name':name,'hc':hc,'dc':dc};
+            var dt = $('input[name="type"]:checked').val();
+            var data =  {'id':id,'name':name,'hc':hc,'dc':dc, 'dt':dt };
             //console.log(data);
             $.post( "edit", data, function( d ) {
                 location.reload();

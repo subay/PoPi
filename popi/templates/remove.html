@@ -7,7 +7,7 @@
        <ul class="menu vertical grey rounded shadowed ">
           {%  for device in devicedb %}
           <li class="bottom-space" id="{{ device.id }}" name="{{ device.id }}">
-            <a href="">
+            <a>
                 <button class="ink-button red"  id="remove{{ device.id }}"><i class="icon-remove-sign"></i></button>
                 {{ device.name }}
                 HC {{ device.home_code }}
