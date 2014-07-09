@@ -7,14 +7,17 @@
        <ul class="menu vertical grey rounded shadowed">
           {%  for device in devicedb %}
           <li>
-            <a href="">
-                <button class="ink-button orange btn-on"  id="{{ device.id }}"><i class="icon-lightbulb"></i></button>
-                <button class="ink-button red btn-off"  id="{{ device.id }}"><i class="icon-off"></i></button>
-                <button class="ink-button blue"  id="{{ device.id }}"><i class="icon-time"></i></button>
+            <a>
+
+                {% if device.device_status == 0 %}
+                    <button class="ink-button grey btn-on"  id="{{ device.id }}"><i class="icon-lightbulb"></i></button>
+                    <button class="ink-button red btn-off"  id="{{ device.id }}"><i class="icon-off"></i></button>
+                {% elif device.device_status == 1 %}
+                    <button class="ink-button orange btn-on"  id="{{ device.id }}"><i class="icon-lightbulb"></i></button>
+                    <button class="ink-button grey btn-off"  id="{{ device.id }}"><i class="icon-off"></i></button>
+                    <button class="ink-button grey btn-timer"  id="{{ device.id }}"><i class="icon-time"></i></button>
+                {% endif %}
                 <strong>{{ device.name }}</strong>
-                {{ device.home_code }}
-                {{ device.device_code }}
-                {{ device.device_status }}
             </a>
           </li>
           {% endfor %}

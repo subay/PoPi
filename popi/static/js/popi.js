@@ -15,11 +15,25 @@ $( document ).ready(function() {
             {
                 e.preventDefault();
                 var id = $(this).attr('id');
-                console.log('on '+id);
+                console.log('off '+id);
                 data = {'id':id,'status':'0'};
                 $.post( "/", data, function( d ) {
                     location.reload();
                 });
+            }
+        );
+        $(".btn-timer").click( function(e)
+            {
+                var time = 5000;
+                e.preventDefault();
+                var id = $(this).attr('id');
+                console.log('timer ' + parseInt(time) + ' ' +id);
+                setTimeout(function() {
+                    data = {'id':id,'status':'0'};
+                    $.post( "/", data, function( d ) {
+                        location.reload();
+                    });
+                }, time);
             }
         );
         $(".btn-remove").click( function(e)
